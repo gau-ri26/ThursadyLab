@@ -1,0 +1,21 @@
+//Write a program to calculate HCF of Two given number.
+
+import java.util.*;
+public class HCF 
+{
+  public static void main (String[]args)
+  {
+	  System.out.println("Enter the number");
+	  Scanner sc = new Scanner(System.in);
+      int n1=0, n2 = 0, hcf;
+      n1 = sc.nextInt();
+      n2 = sc.nextInt();
+      for (int i = 1; i <= n1 || i <= n2; i++)
+      {
+     if (n1 % i == 0 && n2 % i == 0)
+        hcf = i;
+      }
+
+    System.out.println("The HCF of given number is: "+ n1);
+  }
+}
