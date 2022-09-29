@@ -1,0 +1,34 @@
+//Write a program to accept a number from user and then prints the sum of the even and odd integers.
+
+import java.util.*;
+public class question1
+{	
+		public static void main(String[] args) 
+		{	 int i,odd=0,even=0,n;
+			 char ans;
+			 Scanner sc=new Scanner(System.in);
+			do
+			{
+				System.out.print("Enter number: ");       
+				n=sc.nextInt(); 
+				//check if number is even or odd
+					if(n%2==0)
+						
+					{
+						even=even+n;
+						//if even number add the number in even integer
+					}
+					else
+					{
+						odd=odd+n;
+						//if odd number add the number in odd integer
+					}							
+				System.out.println("Do you want to add another number  y/n"); 
+			    ans=sc.next().charAt(0);
+			}
+			while(ans=='Y'||ans=='y');
+			System.out.println("Sum of Even Number"+even);
+			System.out.println("Sum of Odd Number"+odd);
+		}
+
+	}
