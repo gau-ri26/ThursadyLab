@@ -1,0 +1,89 @@
+/*WAP to accept a no from user and check it is prime or not. Pass this number in different function and check it is even or odd.IF number is even than check it is divisible by 10 or not in different function and is no is odd than check it is divisible by 3 or not in different function*/
+
+
+import java.util.Scanner;
+
+public class question3 
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+		question3 q = new question3();
+		int num = question3.accept(); // calling accept and passing value in num
+		q.prime(num); // calling prime function
+	}
+
+	public static int accept()
+  {
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the  number");
+		num = sc.nextInt();
+		return num;
+	}
+
+	public void prime(int n)
+	{
+		boolean flag = true;
+		for (int j = 2; j < n; j++) // we take i from 2 because concept of prime number is no divided by itself and 1 so start from 2
+		{
+
+			if (n % j == 0)
+			{
+				flag = false;
+				break;
+			}
+		}
+		
+		if (flag == true) 
+		{
+			System.out.println(n + " is a prime");
+			EvenOdd(n);
+		} 
+		else
+		{
+			System.out.println(n + " is not a prime");
+			EvenOdd(n);
+		}
+	}
+
+	public void EvenOdd(int n)
+	{
+		if (n % 2 == 0)
+		{
+			System.out.println(n + " is Even number ");
+			div10(n); // calling div10 if number is even
+		} else 
+		{
+			System.out.println(n + " is Odd number");
+			div3(n);// calling div3 if number is odd
+		}
+	}
+
+	public void div10(int n) 
+	{
+		if (n % 10 == 0) // number is divisible by 10
+			System.out.println(n + " is divisible by 10");
+		else 
+		{
+			System.out.println(n + " is not divisible by 10");
+		}
+
+	}
+
+	public void div3(int no)
+	{
+		if (no % 3 == 0) // number divisible by 3
+		{
+			System.out.println(no + " is  divisible by 3");
+			
+		}
+		else
+		{
+			System.out.println(no + " is not divisible by 3");
+		}
+	}
+
+}
