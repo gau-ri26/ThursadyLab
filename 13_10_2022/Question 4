@@ -1,0 +1,23 @@
+/* Write a program to accpet the positive numbers  from user and display the sum of that numbers using loop.*/
+
+
+import java.util.*;
+public class Q4_13_10 
+{
+	public static void main(String[] args) 
+	{
+		
+	Scanner sc=new Scanner(System.in);
+	int sum=0;
+	System.out.println("Enter the Size of Array :");
+	int size=sc.nextInt();
+	int arrray[] =new int[size];
+	System.out.println("Enter the Elements of Array :");
+	for(int i=0;i<=size-1;i++)
+	{
+	 arrray[i]=sc.nextInt();
+	 sum += arrray[i];
+	}
+	System.out.println("The sum of all positive no is :"+sum );
+	}
+}
