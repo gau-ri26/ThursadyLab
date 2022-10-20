@@ -1,0 +1,40 @@
+/* WAP to create a class which contain the method Palindrom .the second class will 
+use the proerty of first class and display the output.*/
+
+import java.util.*;
+
+class palindrome
+{
+	public void paldrome()
+	{
+		Scanner sc= new Scanner(System.in); //To accept number
+	    System.out.println("Enter the number");
+	  int a,temp, ans=0;    
+	  int n=sc.nextInt();//It is to check the number is palindrome  
+	  temp=n;    
+	  while(n>0)
+	  {    
+	   a=n%10;  //for getting remainder  
+	   ans = (ans*10)+a;    
+	   n=n/10;    
+	  }    
+	  if(temp==ans) 
+	  {
+	   System.out.println("The given number is a palindrome number ");    
+	  }
+	  else
+	  {
+	   System.out.println("The given number is a not palindrome number ");
+	   }
+	  }
+}
+
+public class Q1_13_10 extends palindrome
+{
+	public static void main(String[] args) 
+	{
+		palindrome pl = new palindrome();
+		pl.paldrome();
+	}
+
+}
