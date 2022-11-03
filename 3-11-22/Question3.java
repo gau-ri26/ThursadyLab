@@ -9,7 +9,7 @@ public class FibnoiccThread extends Thread
 {
 	public void run()  //Calling run method in another class
     {
-         try
+         try     //use try block where exception show.
          {
               int a=0, b=1, c=0;
               BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -28,9 +28,9 @@ public class FibnoiccThread extends Thread
                    n=n-1;
               }
          }
-         catch (Exception ex)
+         catch (Exception ex)     //catch block to handle the exception.....
          {
-              ex.printStackTrace();
+              ex.printStackTrace();    //Printing the exception....
          }
     }
 }
@@ -41,7 +41,7 @@ public class ReverseThread extends Thread
 {
 	public void run()   //Calling run method in another class
     {
-         try
+         try                        //use try block where exception show.
          {
               
               System.out.println("\n Reverse is: ");
@@ -52,9 +52,9 @@ public class ReverseThread extends Thread
               }
               
          }
-         catch (Exception ex)
+         catch (Exception ex)			//catch block to handle the exception.....
          {
-              ex.printStackTrace();
+              ex.printStackTrace();			//Printing the exception....
          }
     }
 }
@@ -66,7 +66,7 @@ public class MainThreadQ2
   //main method
 	public static void main(String[] args)
     {
-         try
+         try      		 	//use try block where exception show.
          {
               FibnoiccThread fib = new FibnoiccThread();
               fib.start();            // calling the run method
@@ -74,9 +74,9 @@ public class MainThreadQ2
               ReverseThread rev = new ReverseThread();
               rev.start();          // calling the run method
          }
-         catch (Exception ex) 
+         catch (Exception ex) 		//catch block to handle the exception.....
          {
-              ex.printStackTrace();
+              ex.printStackTrace();		//Printing the exception....
          }
     }
 }
